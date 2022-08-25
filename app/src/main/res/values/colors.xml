@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#34A853</color>
+    <color name="secondary">#2D2F48</color>
+
+    <color name="black">#2D2F48</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="textBoxColor">#B8FDBB</color>
+    <color name="backgroundColor">#D9D9D9</color>
+    <color name="color1">#CAB8FD</color>
+    <color name="color2">#FDB8B8</color>
+    <color name="color3">#5398FF</color>
+    <color name="color4">#FDE1B8</color>
+    <color name="color5">#D9D9D9</color>
+    <color name="color6">#52BB69</color>
+
+</resources>

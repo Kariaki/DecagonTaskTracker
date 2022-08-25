@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/back" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="Task Tracker"
+
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/five"
+
+                        />
+
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <include
+                android:id="@+id/note_page"
+
+                layout="@layout/edit_note" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Task created"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/filter"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_property_1_sort" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/taskRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+
+                android:scrollbarThumbVertical="@drawable/ic_scrollbarthumb"
+                android:scrollbars="vertical" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/ic_add"
+        android:id="@+id/actionButton"
+        app:backgroundTint="@color/primary"
+        app:layout_anchor="@id/bottomAppBar"
+
+        />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        app:contentInsetStart="0dp"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="50dp"
+        app:labelVisibilityMode="labeled">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/main_menu">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
